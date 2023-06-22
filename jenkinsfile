@@ -6,6 +6,7 @@ pipeline {
             steps{
                 // mvn test
                 sh "mvn test"
+checkout scmGit(branches: [[name: '*/main']], browser: github('https://github.com/haroonzeb/jenkins-docker-example.git'), extensions: [], userRemoteConfigs: [[url: 'https://github.com/haroonzeb/jenkins-docker-example.git']])
                 
             }
           
